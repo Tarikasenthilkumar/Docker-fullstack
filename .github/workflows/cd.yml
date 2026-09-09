@@ -15,5 +15,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Check Docker
+        run: docker info
+
+      - name: Check Docker Compose
+        run: docker compose version
+
       - name: Deploy Application
         run: docker compose up -d --build
