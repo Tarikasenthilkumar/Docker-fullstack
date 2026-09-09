@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker Images
-        run: COMPOSE_BAKE=false docker compose build
+        run: docker compose build
 
       - name: Start Containers
-        run: COMPOSE_BAKE=false docker compose up -d
+        run: docker compose up -d
 
       - name: Check Containers
         run: docker compose ps
